@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator | Contraseña Aleatoria - ByBraiiaN</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="font/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos-min.css">
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/funciones-min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>PASSWORD GENERATOR</h1>
+            <h4>****** P4SS ******</h4>
+        </header>
+
+        <form action="" class="app" id="app">
+            <div class="row cantidad">
+                <div class="col">
+                    <label for="cantidad">Cantidad de caracteres:</label>
+                </div>
+                <div class="col botones">
+                    <div>
+                        <button class="btn" id="btn-menos"><i class="fas fa-minus"></i></button>
+                    </div>
+                    <div>
+                        <input type="text" id="cantidad" value="12" readonly>
+                    </div>
+                    <div>
+                        <button class="btn" id="btn-mas"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row minusculas">
+                <div class="col">
+                    <label for="btn-minusculas">¿Incluir Minúsculas?</label>
+                </div>
+                <div class="col">
+                    <button class="btn" id="btn-minusculas"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <div class="row mayusculas">
+                <div class="col">
+                    <label for="btn-mayusculas">¿Incluir Mayúsculas?</label>
+                </div>
+                <div class="col">
+                    <button class="btn" id="btn-mayusculas"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <div class="row numeros">
+                <div class="col">
+                    <label for="btn-numeros">¿Incluir Números?</label>
+                </div>
+                <div class="col">
+                    <button class="btn" id="btn-numeros"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <div class="row simbolos">
+                <div class="col">
+                    <label for="simbolos">¿Incluir Símbolos?</label>
+                </div>
+                <div class="col">
+                    <button class="btn false" id="btn-simbolos"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        
+            <div class="row generar">
+                    <div class="col">
+                        <button class="btn btn-generar" id="btn-generar">Generar <i class="fas fa-lock"></i></button>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="input-password" value="P455W0R G3N3R470R" readonly>
+                    </div>
+            </div>
+
+            <div class="row alerta">
+                <div class="col">
+                    <div class="alerta-copiado" id="copiado">
+                        <p><i class="fas fa-copy"></i>Texto Copiado!</p>
+                    </div>
+                </div>
+            </div>
+            <span class="pie">Created @ByBraiiaN</span>
+        </form>
+    </div>
+</body>
+</html>

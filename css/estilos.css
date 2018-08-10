@@ -1,0 +1,298 @@
+@font-face{
+    font-family: 'Gugi';
+    src: url(../font/Gugi-Regular.ttf);
+}
+/******************************
+* INICIO
+******************************/
+*{
+    font-family: 'Gugi', cursive, 'Courier New';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    color: white;
+}
+
+*::selection{
+    background: #51FF00;
+    color: black;
+}
+*::-webkit-selection{
+    background: #51FF00;
+    color: black;
+}
+*::-moz-selection{
+    background: #51FF00;
+    color: black;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+}
+
+.content{
+    max-width: 600px;
+    width: 92%;
+    margin: 100px auto;
+}
+
+
+
+/******************************
+* ENCABEZADO
+******************************/
+header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+header h1, h4{
+    font-size: 45px;
+    padding: 15px;
+    background-color: black;
+    display: inline-block;
+}
+header h4{
+    font-size: 28px;
+}
+
+
+
+/******************************
+* FILAS Y COLUMNAS
+******************************/
+.app .row{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col{
+    width: 50%;
+}
+
+
+
+/******************************
+* INPUTS Y BOTONES GENERALES
+******************************/
+.app{
+    background: black;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: .85;
+}
+
+.app label{
+    line-height: 40px;
+}
+
+.app input{
+    text-align: center;
+    border: none;
+    color: black;
+    width: 100%;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif
+}
+
+.app .btn{
+    width: 100%;
+    background: #1D8905;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline:none;
+}
+
+.app .btn:hover{
+    background:  #2DE304;
+}
+
+.app .btn.false{
+	background: #031D01;
+}
+
+
+/******************************
+* ROW: CANTIDAD CARACTERES
+******************************/
+.app .cantidad .botones div{
+    width: 100%;
+}
+
+.app .cantidad .botones :nth-child(1) button{
+    border-radius: 4px 0 0 4px;
+}
+
+.app .cantidad input{
+    width: 100%;
+    cursor: default;
+    background: #031D01;
+    color: white;
+}
+
+.app .cantidad .botones :nth-child(3) button{
+    border-radius: 0 0 4px 4px;
+}
+
+.app .cantidad .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/******************************
+* INPUTS Y BOTONES GENERALES
+******************************/
+.app .row.generar{
+    margin-bottom: 10px;
+}
+
+.app .row.generar .col:nth-child(1){
+    width: 30%;
+}
+
+.app .row.generar .col:nth-child(2){
+    width: 65%;
+}
+
+.app .row.generar .btn.btn-generar{
+    width: 100%;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 40px;
+    position: relative;
+}
+
+.app .row.generar .btn.btn-generar i{
+    margin-left: 20px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+}
+
+.app .row.generar .btn.btn-generar:after{
+    content: "";
+    width: 14px;
+    display: inline-block;
+    height: 14px;
+    background: #1D8905;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+    right: -7px;
+    transition: all .3s ease;
+}
+
+.app .row.generar .col:nth-child(1):hover .btn.btn-generar:after{
+    background: #2DE304;
+}
+
+.app .row.generar .input-password{
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .row.generar .input-password:hover{
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.app .row.generar input::selection{
+    background: white;
+    color: black;
+}
+
+.app .row.generar input::-moz-selection{
+    background: white;
+    color: black;
+}
+
+.app .row.generar input::-webkit-selection{
+    background: white;
+    color: black;
+}
+
+
+
+/******************************
+* ROW: CANTIDAD CARACTERES
+******************************/
+.app .row.alerta{
+    justify-content: flex-end;
+}
+
+.app .row.alerta .col{
+    width: 45%;
+}
+
+.app .row.alerta .alerta-copiado{
+    text-align: center;
+    display: none;
+    transition: all .3s ease;
+}
+
+.app .row.alerta .alerta-copiado.active{
+    display: block;
+    position: absolute;
+}
+
+.app .row.alerta .alerta-copiado p,
+.app .row.alerta .alerta-copiado i{
+    font-size: .8em;
+    background: green;
+    opacity: .9;
+}
+
+.pie{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+    color: grey;
+}
+
+
+
+/******************************
+* RESPONSIVE MEDIA QUERY
+******************************/
+@media screen and (max-width: 550px){
+    .app .row{
+        flex-direction: column;     
+        margin-bottom: 20px;
+    }
+
+    .app .row .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .app .row.generar {
+        border-top: 1px solid (255, 255, 255, .25);
+        padding-top: 40px;
+    }
+
+    .app .row.generar .col:nth-child(1),
+    .app .row.generar .col:nth-child(2){
+        width: 100%;
+    }
+
+    .app .row.generar .btn.btn-generar:after{
+        top: auto;
+        left: 50%;
+        right: 50%;
+        bottom: -7px;
+    }
+
+}
